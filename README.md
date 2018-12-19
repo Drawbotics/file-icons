@@ -70,7 +70,7 @@ PDF | `pdf`
 Data | `xml`, `csv`, `xls`
 Images | `jpg`, `gif`, `png`
 
-If you want to add support for an extension, or support a new category of files don't hesitate to submit a PR.
+If you want to add support for an extension, or support a new category of files don't hesitate to submit a PR. More extensions and categories will be added through time.
 
 ## Develop
 ```bash

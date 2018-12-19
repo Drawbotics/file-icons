@@ -1,0 +1,95 @@
+@width: 100px;
+@height: 140px;
+@fold-size: 50px;
+@label-width: 100px;
+@label-height: 50px;
+@font-size: 40px;
+
+// SIZES
+@small-divisor: 5;
+
+
+// COLORS
+@border-color: #8C8C8C;
+@white: #FFFFFF;
+
+
+@icon-gradient: ~'45deg, white calc(100% - 35px), rgba(255, 255, 255, 0) calc(100% - 35px), rgba(255, 255, 255, 0) 100%';
+@border-gradient: ~'45deg, #8C8C8C calc(100% - 38px), transparent calc(100% - 38px), transparent 100%';
+@fold-gradient: ~'45deg, white calc(50% - 2px), #8C8C8C calc(50% - 2px), #8C8C8C calc(50% + 2px), transparent calc(50% + 2px), transparent 100%';
+
+
+
+.file-icon {
+  position: relative;
+  width: @width;
+  height: @height;
+  background: -ms-linear-gradient(@icon-gradient);
+  background: -o-linear-gradient(@icon-gradient);
+  background: -moz-linear-gradient(@icon-gradient);
+  background: -webkit-linear-gradient(@icon-gradient);
+  background: linear-gradient(@icon-gradient);
+  border-width: 4px;
+  border-style: solid;
+
+  border-image: -ms-linear-gradient(@border-gradient);
+  border-image: -o-linear-gradient(@border-gradient);
+  border-image: -moz-linear-gradient(@border-gradient);
+  border-image: -webkit-linear-gradient(@border-gradient);
+  border-image: linear-gradient(@border-gradient);
+  border-image-slice: 1;
+  clip-path: polygon(calc(100% - 48px) 0, 100% 48px, 100% 100%, -30px 100%, -30px 0);
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    height: @fold-size;
+    width: @fold-size;
+    background: -ms-linear-gradient(@fold-gradient);
+    background: -o-linear-gradient(@fold-gradient);
+    background: -moz-linear-gradient(@fold-gradient);
+    background: -webkit-linear-gradient(@fold-gradient);
+    background: linear-gradient(@fold-gradient);
+    box-shadow: -2px 2px 0px 2px @border-color;
+    border-bottom-left-radius: 5px;
+  }
+
+  &::after {
+    content: 'zip';
+    position: absolute;
+    height: @label-height;
+    width: @label-width;
+    bottom: 20px;
+    left: -30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: @font-size;
+    color: @white;
+    font-weight: 600;
+    background: #1482C8;
+  }
+
+  &--small {
+    width: @width / @small-divisor;
+    height: @height / @small-divisor;
+    border-width: 1px;
+    // clip-path: polygon(calc(100% - 48px) 0, 100% 48px, 100% 100%, -30px 100%, -30px 0);
+    clip-path: none;
+
+    &::before {
+      height: @fold-size / @small-divisor;
+      width: @fold-size / @small-divisor;
+      border-bottom-left-radius: 1px;
+      box-shadow: -1px 1px 0px 1px
+    }
+
+    &::after {
+      height: @label-height / @small-divisor;
+      width: @label-width / @small-divisor;
+      font-size: @font-size / @small-divisor;
+      bottom: 5px;
+    }
+  }
+}

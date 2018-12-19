@@ -1,0 +1,42 @@
+{
+  "name": "@drawbotics/file-icons",
+  "version": "0.1.0",
+  "description": "Small icon library for file type icons",
+  "main": "dist/file-icons.js",
+  "scripts": {
+    "clean": "rimraf dist && rimraf lib",
+    "build:umd": "NODE_ENV=production webpack --config webpack.config.js",
+    "build": "npm run clean && npm run build:umd",
+    "build:watch": "npm run clean && NODE_ENV=production webpack --watch --config webpack.config.js",
+    "prepublishOnly": "npm run build",
+    "example": "npx rdw serve --port 4001 docs/index.mdx"
+  },
+  "author": "Nick <nick@drawbotics.com>",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "@drawbotics/check-env": "^1.0.0",
+    "babel-loader": "^8.0.4",
+    "better-webpack-progress": "^1.1.0",
+    "css-loader": "^2.0.1",
+    "emotion": "^10.0.5",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.5.0",
+    "react": "^16.6.3",
+    "react-display-window": "^2.1.1",
+    "react-dom": "^16.6.3",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

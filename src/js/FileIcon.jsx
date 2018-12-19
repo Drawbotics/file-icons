@@ -23,7 +23,7 @@ const Icon = ({
 }) => {
   const extension = filename && ! file ? getExtensionFromFilename(filename) : file;
   return (
-    <div className={className({ size })} data-file={extension} />
+    <div className={className({ size })} data-file={extension.toLowerCase()} />
   );
 };
 

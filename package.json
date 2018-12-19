@@ -12,7 +12,7 @@
     "example": "npx rdw serve --port 4001 docs/index.mdx"
   },
   "author": "Nick <nick@drawbotics.com>",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "react": "16.x",
     "react-dom": "16.x"

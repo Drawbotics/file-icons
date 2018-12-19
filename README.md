@@ -57,6 +57,21 @@ Prop | Type | Description | Possible values
 
 When using the React component you don't need to worry if the extension/filename is lowercase, the component takes care of that.
 
+#### Supported file types
+Any file extension that does not match the ones included with the library will fallback to the default grey color. Each category has its own color. The supported extension is a subset of the provided value, meaning that `docx` is supported since we look for `doc`.
+
+Category | Possible values
+--- | ---
+Archives | `zip`, `rar`
+3D Files | `3ds`, `dwg`
+Text Documents | `doc`, `rtf`, `txt`
+Vector graphics | `ai`, `svg`
+PDF | `pdf`
+Data | `xml`, `csv`, `xls`
+Images | `jpg`, `gif`, `png`
+
+If you want to add support for an extension, or support a new category of files don't hesitate to submit a PR.
+
 ## Develop
 ```bash
 npm install

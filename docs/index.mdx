@@ -1,13 +1,25 @@
+import { PlayGround, Knobs, PropsTable } from 'react-display-window/lib/components';
+
 import './style.css';
 
-import FileIcon from '../dist/file-icons.js';
 import '../dist/style.css';
+import FileIcon from '../dist/file-icons.js';
 
 
-## Example
+## Pure CSS Example
 
-<div className="container">
-  <FileIcon />
-  <div className="file-icon" style={{ transform: 'scale(0.2)' }} />
-  <div className="file-icon file-icon--small" />
-</div>
+<PlayGround>
+  <div className="container">
+    <div className="file-icon" data-file="docx" />
+    <div className="file-icon file-icon--medium" data-file="3ds" />
+    <div className="file-icon file-icon--large" data-file="rar" />
+  </div>
+</PlayGround>
+
+
+## React Component
+<PlayGround>
+  <div className="container">
+    <FileIcon file="zip" />
+  </div>
+</PlayGround>

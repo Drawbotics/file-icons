@@ -1,0 +1,118 @@
+@import './vars';
+@import './functions';
+@import './utils';
+
+
+.file-icon {
+  position: relative;
+  width: @width;
+  height: @height;
+  border-width: 1px;
+  -webkit-font-smoothing: antialiased;
+
+  .iconGradient(@white, 5px);
+  .borderGradient(@border-color, 6.5px);
+  .polygonPath(9.5px, -7px);
+
+  border-style: solid;
+  border-image-slice: 1;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: @fold-size;
+    width: @fold-size;
+    box-shadow: -1px 1px 0px 0.5px fade(@border-color, 60);
+    border-bottom-left-radius: 1px;
+
+    .foldGradient(0.5px);
+  }
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    height: @label-height;
+    width: @label-width;
+    bottom: 4px;
+    left: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: @font-size;
+    color: @white;
+    font-weight: 600;
+    background: @border-color;
+  }
+
+  .contentFromType();
+  .backgroundFromType();
+
+  // MEDIUM SIZE
+  &--medium {
+    width: @width * @medium-multiplier;
+    height: @height * @medium-multiplier;
+    border-width: 3px;
+
+    .iconGradient(@white, 15px);
+    .borderGradient(@border-color, 18px);
+    .polygonPath(26px, -20px);
+
+    border-style: solid;
+    border-image-slice: 1;
+
+    &::before {
+      top: -2px;
+      right: -2px;
+      height: @fold-size * @medium-multiplier;
+      width: @fold-size * @medium-multiplier;
+      box-shadow: -1.5px 1.5px 0px 1.5px @border-color;
+      border-bottom-left-radius: 5px;
+
+      .foldGradient(2px);
+    }
+
+    &::after {
+      height: @label-height * @medium-multiplier;
+      width: @label-width * @medium-multiplier;
+      font-size: @font-size * @medium-multiplier;
+      bottom: 8px;
+      left: -20px;
+    }
+  }
+
+  // LARGE SIZE
+  &--large {
+    width: @width * @large-multiplier;
+    height: @height * @large-multiplier;
+    border-width: 4px;
+
+    .iconGradient(@white, 35px);
+    .borderGradient(@border-color, 38px);
+    .polygonPath(48px, -34px);
+
+    border-style: solid;
+    border-image-slice: 1;
+
+    &::before {
+      top: -4px;
+      right: -4px;
+      height: @fold-size * @large-multiplier;
+      width: @fold-size * @large-multiplier;
+      box-shadow: -2px 2px 0px 2px @border-color;
+      border-bottom-left-radius: 5px;
+
+      .foldGradient(2px);
+    }
+
+    &::after {
+      height: @label-height * @large-multiplier;
+      width: @label-width * @large-multiplier;
+      font-size: @font-size * @large-multiplier;
+      bottom: 20px;
+      left: -34px;
+    }
+  }
+}

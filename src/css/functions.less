@@ -1,0 +1,36 @@
+@import './vars';
+
+
+.iconGradient(@color, @step) {
+  @gradient: ~"45deg, @{color} calc(100% - @{step}), rgba(255, 255, 255, 0) calc(100% - @{step}), rgba(255, 255, 255, 0) 100%";
+  background: -ms-linear-gradient(@gradient);
+  background: -o-linear-gradient(@gradient);
+  background: -moz-linear-gradient(@gradient);
+  background: -webkit-linear-gradient(@gradient);
+  background: linear-gradient(@gradient);
+}
+
+
+.borderGradient(@color, @step) {
+  @gradient: ~"45deg, @{color} calc(100% - @{step}), rgba(255, 255, 255, 0) calc(100% - @{step}), rgba(255, 255, 255, 0) 100%";
+  border-image: -ms-linear-gradient(@gradient);
+  border-image: -o-linear-gradient(@gradient);
+  border-image: -moz-linear-gradient(@gradient);
+  border-image: -webkit-linear-gradient(@gradient);
+  border-image: linear-gradient(@gradient);
+}
+
+
+.foldGradient(@fold-width) {
+  @gradient: ~"45deg, @{white} calc(50% - @{fold-width}), @{border-color} calc(50% - @{fold-width}), @{border-color} calc(50% + @{fold-width}), transparent calc(50% + @{fold-width}), transparent 100%";
+  background: -ms-linear-gradient(@gradient);
+  background: -o-linear-gradient(@gradient);
+  background: -moz-linear-gradient(@gradient);
+  background: -webkit-linear-gradient(@gradient);
+  background: linear-gradient(@gradient);
+}
+
+
+.polygonPath(@a, @b) {
+  clip-path: polygon(calc(100% - @a) 0, 100% @a, 100% 100%, @b 100%, @b 0);
+}

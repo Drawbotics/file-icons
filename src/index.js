@@ -1,15 +1,3 @@
-import React from 'react';
+import FileIcon from './js/FileIcon';
 
-import './style.less';
-
-
-const Icon = ({}) => {
-  return (
-    <div>
-      <div className="file-icon" />
-    </div>
-  );
-};
-
-
-export default Icon;
+export default FileIcon;

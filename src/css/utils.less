@@ -1,0 +1,31 @@
+@import './colors';
+
+
+.contentFromType() {
+  &[data-file]::after {
+    content: attr(data-file);
+  }
+}
+
+.backgroundFromType() {
+  &[data-file*=zip],
+  &[data-file*=rar] {
+    &::after {
+      background: @brown;
+    }
+  }
+
+  &[data-file*=dwg],
+  &[data-file*='3ds'] {
+    &::after {
+      background: @purple;
+    }
+  }
+
+  &[data-file*=doc],
+  &[data-file*=txt] {
+    &::after {
+      background: @blue;
+    }
+  }
+}

@@ -23,9 +23,40 @@
   }
 
   &[data-file*=doc],
+  &[data-file*=rtf],
   &[data-file*=txt] {
     &::after {
       background: @blue;
+    }
+  }
+
+  &[data-file*=svg],
+  &[data-file*=ai] {
+    &::after {
+      background: @orange;
+    }
+  }
+
+  &[data-file*=pdf] {
+    &::after {
+      background: @red;
+    }
+  }
+
+  &[data-file*=xml],
+  &[data-file*=csv],
+  &[data-file*=xls] {
+    &::after {
+      background: @green;
+    }
+  }
+
+  &[data-file*=jpg],
+  &[data-file*=jpeg],
+  &[data-file*=gif],
+  &[data-file*=png] {
+    &::after {
+      background: @dark-blue;
     }
   }
 }

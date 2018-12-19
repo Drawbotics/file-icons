@@ -3,13 +3,13 @@ import { PlayGround, Knobs, PropsTable } from 'react-display-window/lib/componen
 import './style.css';
 
 import '../dist/style.css';
-import FileIcon from '../dist/file-icons.js';
+import { FileIcon } from '../dist/file-icons.js';
 
 
 ## Pure CSS Example
 
 <PlayGround>
-  <div className="container">
+  <div className="playground">
     <div className="file-icon" data-file="docx" />
     <div className="file-icon file-icon--medium" data-file="3ds" />
     <div className="file-icon file-icon--large" data-file="rar" />
@@ -19,7 +19,61 @@ import FileIcon from '../dist/file-icons.js';
 
 ## React Component
 <PlayGround>
-  <div className="container">
-    <FileIcon file="zip" />
+  <div className="playground">
+    <FileIcon file="pdf" />
+    <FileIcon file="pdf" size="medium" />
+    <FileIcon filename="mydoc.txt" size="large" />
   </div>
 </PlayGround>
+
+
+# All types
+### Archives
+<div className="container">
+  <div className="file-icon" data-file="zip" />
+  <div className="file-icon" data-file="rar" />
+</div>
+
+
+### 3D Files
+<div className="container">
+  <div className="file-icon" data-file="3ds" />
+  <div className="file-icon" data-file="dwg" />
+</div>
+
+
+### Text documents
+<div className="container">
+  <div className="file-icon" data-file="doc" />
+  <div className="file-icon" data-file="rtf" />
+  <div className="file-icon" data-file="txt" />
+</div>
+
+
+### Vector graphics
+<div className="container">
+  <div className="file-icon" data-file="svg" />
+  <div className="file-icon" data-file="ai" />
+</div>
+
+
+### PDF
+<div className="container">
+  <div className="file-icon" data-file="pdf" />
+</div>
+
+
+### Data
+<div className="container">
+  <div className="file-icon" data-file="xml" />
+  <div className="file-icon" data-file="csv" />
+  <div className="file-icon" data-file="xls" />
+</div>
+
+
+### Images
+<div className="container">
+  <div className="file-icon" data-file="jpg" />
+  <div className="file-icon" data-file="gif" />
+  <div className="file-icon" data-file="png" />
+</div>

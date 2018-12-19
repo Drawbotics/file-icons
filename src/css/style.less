@@ -4,15 +4,17 @@
 
 
 .file-icon {
+  font-family: Arial, sans-serif;
   position: relative;
   width: @width;
   height: @height;
   border-width: 1px;
   -webkit-font-smoothing: antialiased;
+  margin-left: @label-displacement - 1px;
 
   .iconGradient(@white, 5px);
   .borderGradient(@border-color, 6.5px);
-  .polygonPath(9.5px, -7px);
+  .polygonPath(9.5px, -@label-displacement);
 
   border-style: solid;
   border-image-slice: 1;
@@ -36,7 +38,7 @@
     height: @label-height;
     width: @label-width;
     bottom: 4px;
-    left: -7px;
+    left: -@label-displacement;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +47,8 @@
     color: @white;
     font-weight: 600;
     background: @border-color;
+    letter-spacing: -1px;
+    padding-top: 1px;
   }
 
   .contentFromType();
@@ -55,10 +59,11 @@
     width: @width * @medium-multiplier;
     height: @height * @medium-multiplier;
     border-width: 3px;
+    margin-left: @label-displacement * @medium-multiplier - 3px;;
 
     .iconGradient(@white, 15px);
     .borderGradient(@border-color, 18px);
-    .polygonPath(26px, -20px);
+    .polygonPath(26px, -(@label-displacement * @medium-multiplier));
 
     border-style: solid;
     border-image-slice: 1;
@@ -79,7 +84,7 @@
       width: @label-width * @medium-multiplier;
       font-size: @font-size * @medium-multiplier;
       bottom: 8px;
-      left: -20px;
+      left: -(@label-displacement * @medium-multiplier);
     }
   }
 
@@ -88,10 +93,11 @@
     width: @width * @large-multiplier;
     height: @height * @large-multiplier;
     border-width: 4px;
+    margin-left: @label-displacement * @large-multiplier - 4px;
 
     .iconGradient(@white, 35px);
     .borderGradient(@border-color, 38px);
-    .polygonPath(48px, -34px);
+    .polygonPath(48px, -(@label-displacement * @large-multiplier));
 
     border-style: solid;
     border-image-slice: 1;
@@ -112,7 +118,7 @@
       width: @label-width * @large-multiplier;
       font-size: @font-size * @large-multiplier;
       bottom: 20px;
-      left: -34px;
+      left: -(@label-displacement * @large-multiplier);
     }
   }
 }

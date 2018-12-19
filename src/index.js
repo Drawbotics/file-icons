@@ -1,3 +1,1 @@
-import FileIcon from './js/FileIcon';
-
-export default FileIcon;
+export { default as FileIcon } from './js/FileIcon';

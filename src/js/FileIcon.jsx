@@ -1,11 +1,29 @@
 import React from 'react';
+import cn from 'classnames';
 
 import '../css/style.less';
 
 
-const Icon = ({ file }) => {
+function getExtensionFromFilename(filename) {
+  const sections = filename.split('.');
+  return sections[sections.length - 1];
+}
+
+
+const className = (props) => cn('file-icon', {
+  'file-icon--medium': props.size === 'medium',
+  'file-icon--large': props.size === 'large',
+});
+
+
+const Icon = ({
+  file,
+  size,
+  filename,
+}) => {
+  const extension = filename && ! file ? getExtensionFromFilename(filename) : file;
   return (
-    <div className="file-icon" data-file={file} />
+    <div className={className({ size })} data-file={extension} />
   );
 };
 

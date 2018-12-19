@@ -4,7 +4,7 @@
 ```bash
 npm install @drawbotics/file-icons
 ```
-A simple library to generate icons depending on the file type. The library can be used both by importing the stylesheet (useful if you have a simple project without React dependencies), and also exports a React component.
+A simple library to display icons depending on the file type. The library can be used both by importing the stylesheet (useful if you have a simple project without React dependencies), and also exports a React component.
 
 **DISCLAIMER**
 In order to have a _single div_ usage, and given the complexity of the icon look, a lot of CSS features that may not be compatible with older browsers is used. Namely `linear-gradient`, `border-image` and `clip-path`. Nonetheless, all the styles are prefixed.

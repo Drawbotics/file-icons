@@ -28,6 +28,11 @@ You can import the component anywhere in your code through:
 ```js
 import { FileIcon } from '@drawbotics/file-icons';
 ```
+If you use CSSinJS then don't forget to include the stylesheet if you haven't already
+```js
+import '@drawbotics/file-icons/dist/style.css';
+```
+
 And use it like such:
 ```js
 <FileIcon file="pdf" />

@@ -28,6 +28,10 @@ You can also pass different class names for different sizes:
 <div className="file-icon file-icon--large" data-file="rar" />
 ```
 
+<img src="docs/preview.png" width="400">
+
+Example icons with default, medium and large sizing.
+
 #### React
 You can import the component anywhere in your code through:
 ```js

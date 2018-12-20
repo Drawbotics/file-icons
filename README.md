@@ -62,13 +62,15 @@ Any file extension that does not match the ones included with the library will f
 
 Category | Possible values
 --- | ---
-Archives | `zip`, `rar`
-3D Files | `3ds`, `dwg`
-Text Documents | `doc`, `rtf`, `txt`
+Archives | `zip`, `rar`, `tar`, `dmg`, `jar`
+3D Files | `3ds`, `dwg`, `obj`, `dae`, `skp`, `fbx`
+Text Documents | `doc`, `rtf`, `txt`, `odt`, `tex`,
 Vector graphics | `ai`, `svg`
 PDF | `pdf`
 Data | `xml`, `csv`, `xls`
-Images | `jpg`, `gif`, `png`
+Images | `jpg`, `gif`, `png`, `jpeg`, `tif`, `psd`, `raw`
+Video | `webm`, `mkv`, `avi`, `mov`, `m4v`, `mpeg`, `mp4`
+Audio | `mp3`, `m4a`, `ogg`, `acc`, `flac`
 
 If you want to add support for an extension, or support a new category of files don't hesitate to submit a PR. More extensions and categories will be added through time.
 

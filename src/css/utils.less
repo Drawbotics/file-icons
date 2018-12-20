@@ -9,6 +9,9 @@
 
 .backgroundFromType() {
   &[data-file*=zip],
+  &[data-file*=tar],
+  &[data-file*=dmg],
+  &[data-file*=jar],
   &[data-file*=rar] {
     &::after {
       background: @brown;
@@ -16,6 +19,10 @@
   }
 
   &[data-file*=dwg],
+  &[data-file*=obj],
+  &[data-file*=dae],
+  &[data-file*=skp],
+  &[data-file*=fbx],
   &[data-file*='3ds'] {
     &::after {
       background: @purple;
@@ -24,6 +31,8 @@
 
   &[data-file*=doc],
   &[data-file*=rtf],
+  &[data-file*=odt],
+  &[data-file*=tex],
   &[data-file*=txt] {
     &::after {
       background: @blue;
@@ -54,9 +63,34 @@
   &[data-file*=jpg],
   &[data-file*=jpeg],
   &[data-file*=gif],
+  &[data-file*=tif],
+  &[data-file*=psd],
+  &[data-file*=raw],
   &[data-file*=png] {
     &::after {
       background: @dark-blue;
+    }
+  }
+
+  &[data-file*=webm],
+  &[data-file*=mkv],
+  &[data-file*=avi],
+  &[data-file*=mov],
+  &[data-file*=m4v],
+  &[data-file*=mpeg],
+  &[data-file*=mp4] {
+    &::after {
+      background: @pink;
+    }
+  }
+
+  &[data-file*=mp3],
+  &[data-file*=m4a],
+  &[data-file*=ogg],
+  &[data-file*=aac],
+  &[data-file*=flac] {
+    &::after {
+      background: @dark-green;
     }
   }
 }

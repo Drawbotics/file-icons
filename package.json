@@ -1,6 +1,6 @@
 {
   "name": "@drawbotics/file-icons",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Small icon library for file type icons",
   "main": "dist/file-icons.js",
   "scripts": {

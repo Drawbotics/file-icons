@@ -32,7 +32,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.5.0",
     "react": "^16.6.3",
-    "react-display-window": "^2.1.1",
+    "react-display-window": "^2.1.2",
     "react-dom": "^16.6.3",
     "rimraf": "^2.6.2",
     "style-loader": "^0.23.1",

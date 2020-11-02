@@ -11,6 +11,13 @@
     "prepublishOnly": "npm run build",
     "example": "npx rdw serve --port 4001 docs/index.mdx"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drawbotics/file-icons"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "Nick <nick@drawbotics.com>",
   "license": "MIT",
   "peerDependencies": {

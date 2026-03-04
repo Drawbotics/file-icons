@@ -5,9 +5,9 @@
   "main": "dist/file-icons.js",
   "scripts": {
     "clean": "rimraf dist && rimraf lib",
-    "build:umd": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:umd": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production webpack --config webpack.config.js",
     "build": "npm run clean && npm run build:umd",
-    "build:watch": "npm run clean && NODE_ENV=production webpack --watch --config webpack.config.js",
+    "build:watch": "npm run clean && NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production webpack --watch --config webpack.config.js",
     "prepublishOnly": "npm run build",
     "example": "echo 'Broken: react-display-window and @drawbotics/check-env were removed because check-env@1.0.0 was unpublished from the registry' && exit 1"
   },

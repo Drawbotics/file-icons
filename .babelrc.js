@@ -1,9 +1,9 @@
 module.exports = {
   "presets": [
     ["@babel/preset-env", {
-      "useBuiltIns": "usage",
+      "useBuiltIns": false,
       "modules": false,
     }],
-    ["@babel/preset-react"],
+    ["@babel/preset-react", { "runtime": "automatic" }],
   ],
 };

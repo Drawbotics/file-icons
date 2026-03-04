@@ -1,6 +1,6 @@
 {
   "name": "@drawbotics/file-icons",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Small icon library for file type icons",
   "main": "dist/file-icons.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run build:umd",
     "build:watch": "npm run clean && NODE_ENV=production webpack --watch --config webpack.config.js",
     "prepublishOnly": "npm run build",
-    "example": "npx rdw serve --port 4001 docs/index.mdx"
+    "example": "echo 'Broken: react-display-window and @drawbotics/check-env were removed because check-env@1.0.0 was unpublished from the registry' && exit 1"
   },
   "repository": {
     "type": "git",
@@ -21,14 +21,13 @@
   "author": "Nick <nick@drawbotics.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": "16.x",
-    "react-dom": "16.x"
+    "react": ">=17",
+    "react-dom": ">=17"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
-    "@drawbotics/check-env": "^1.0.0",
     "babel-loader": "^8.0.4",
     "better-webpack-progress": "^1.1.0",
     "css-loader": "^2.0.1",
@@ -38,9 +37,8 @@
     "mini-css-extract-plugin": "^0.5.0",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.5.0",
-    "react": "^16.6.3",
-    "react-display-window": "^2.1.2",
-    "react-dom": "^16.6.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "rimraf": "^2.6.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.27.1",

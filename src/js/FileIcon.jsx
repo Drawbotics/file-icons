@@ -1,18 +1,11 @@
-import cn from 'classnames';
-
-import '../css/style.less';
-
-
 function getExtensionFromFilename(filename) {
   const sections = filename.split('.');
   return sections[sections.length - 1];
 }
 
 
-const className = (props) => cn('file-icon', {
-  'file-icon--medium': props.size === 'medium',
-  'file-icon--large': props.size === 'large',
-});
+const className = (size) =>
+  `file-icon${size === 'medium' || size === 'large' ? ` file-icon--${size}` : ''}`;
 
 
 const Icon = ({
@@ -22,7 +15,7 @@ const Icon = ({
 }) => {
   const extension = filename && ! file ? getExtensionFromFilename(filename) : file;
   return (
-    <div className={className({ size })} data-file={extension.toLowerCase()} />
+    <div className={className(size)} data-file={extension.toLowerCase()} />
   );
 };
 

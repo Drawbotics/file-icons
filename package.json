@@ -1,15 +1,25 @@
 {
   "name": "@drawbotics/file-icons",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Small icon library for file type icons",
-  "main": "dist/file-icons.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "clean": "rimraf dist && rimraf lib",
-    "build:umd": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production webpack --config webpack.config.js",
-    "build": "npm run clean && npm run build:umd",
-    "build:watch": "npm run clean && NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production webpack --watch --config webpack.config.js",
-    "prepublishOnly": "npm run build",
-    "example": "echo 'Broken: react-display-window and @drawbotics/check-env were removed because check-env@1.0.0 was unpublished from the registry' && exit 1"
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,30 +31,10 @@
   "author": "Nick <nick@drawbotics.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=17",
-    "react-dom": ">=17"
+    "react": ">=17"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "better-webpack-progress": "^1.1.0",
-    "css-loader": "^2.0.1",
-    "emotion": "^10.0.5",
-    "less": "^3.9.0",
-    "less-loader": "^4.1.0",
-    "mini-css-extract-plugin": "^0.5.0",
-    "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "^6.5.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "rimraf": "^2.6.2",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6"
+    "esbuild": "^0.25.0",
+    "react": "^19.0.0"
   }
 }

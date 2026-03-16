@@ -1,0 +1,166 @@
+.file-icon {
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 28px;
+  border-width: 1px;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 7px;
+  background: linear-gradient(45deg, #FFFFFF calc(100% - 5px), rgba(255, 255, 255, 0) calc(100% - 5px), rgba(255, 255, 255, 0) 100%);
+  -o-border-image: linear-gradient(45deg, #8C8C8C calc(100% - 6.5px), rgba(255, 255, 255, 0) calc(100% - 6.5px), rgba(255, 255, 255, 0) 100%);
+     border-image: linear-gradient(45deg, #8C8C8C calc(100% - 6.5px), rgba(255, 255, 255, 0) calc(100% - 6.5px), rgba(255, 255, 255, 0) 100%);
+  -webkit-clip-path: polygon(calc(100% - 9.5px) 0, 100% 9.5px, 100% 100%, -8px 100%, -8px 0);
+          clip-path: polygon(calc(100% - 9.5px) 0, 100% 9.5px, 100% 100%, -8px 100%, -8px 0);
+  border-style: solid;
+  border-image-slice: 1;
+}
+.file-icon::before {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  height: 10px;
+  width: 10px;
+  box-shadow: -1px 1px 0px 0.5px rgba(140, 140, 140, 0.6);
+  border-bottom-left-radius: 1px;
+  background: linear-gradient(45deg, #FFFFFF calc(50% - 0.5px), #8C8C8C calc(50% - 0.5px), #8C8C8C calc(50% + 0.5px), transparent calc(50% + 0.5px), transparent 100%);
+}
+.file-icon::after {
+  content: ' ';
+  position: absolute;
+  height: 10px;
+  width: 23px;
+  bottom: 4px;
+  left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 8px;
+  color: #FFFFFF;
+  font-weight: 600;
+  background: #8C8C8C;
+  letter-spacing: -1px;
+  padding-top: 1px;
+}
+.file-icon[data-file]::after {
+  content: attr(data-file);
+}
+.file-icon[data-file*=zip]::after,
+.file-icon[data-file*=tar]::after,
+.file-icon[data-file*=dmg]::after,
+.file-icon[data-file*=jar]::after,
+.file-icon[data-file*=rar]::after {
+  background: #A19382;
+}
+.file-icon[data-file*=dwg]::after,
+.file-icon[data-file*=obj]::after,
+.file-icon[data-file*=dae]::after,
+.file-icon[data-file*=skp]::after,
+.file-icon[data-file*=fbx]::after,
+.file-icon[data-file*='3ds']::after {
+  background: #5E43C6;
+}
+.file-icon[data-file*=doc]::after,
+.file-icon[data-file*=rtf]::after,
+.file-icon[data-file*=odt]::after,
+.file-icon[data-file*=tex]::after,
+.file-icon[data-file*=txt]::after {
+  background: #1482C8;
+}
+.file-icon[data-file*=svg]::after,
+.file-icon[data-file*=ai]::after {
+  background: #EC8F08;
+}
+.file-icon[data-file*=pdf]::after {
+  background: #D83433;
+}
+.file-icon[data-file*=xml]::after,
+.file-icon[data-file*=csv]::after,
+.file-icon[data-file*=xls]::after {
+  background: #47B188;
+}
+.file-icon[data-file*=jpg]::after,
+.file-icon[data-file*=jpeg]::after,
+.file-icon[data-file*=gif]::after,
+.file-icon[data-file*=tif]::after,
+.file-icon[data-file*=psd]::after,
+.file-icon[data-file*=raw]::after,
+.file-icon[data-file*=png]::after {
+  background: #1C387A;
+}
+.file-icon[data-file*=webm]::after,
+.file-icon[data-file*=mkv]::after,
+.file-icon[data-file*=avi]::after,
+.file-icon[data-file*=mov]::after,
+.file-icon[data-file*=m4v]::after,
+.file-icon[data-file*=mpeg]::after,
+.file-icon[data-file*=mp4]::after {
+  background: #FF4290;
+}
+.file-icon[data-file*=mp3]::after,
+.file-icon[data-file*=m4a]::after,
+.file-icon[data-file*=ogg]::after,
+.file-icon[data-file*=aac]::after,
+.file-icon[data-file*=flac]::after {
+  background: #0C6845;
+}
+.file-icon--medium {
+  width: 50px;
+  height: 70px;
+  border-width: 3px;
+  margin-left: 17px;
+  background: linear-gradient(45deg, #FFFFFF calc(100% - 15px), rgba(255, 255, 255, 0) calc(100% - 15px), rgba(255, 255, 255, 0) 100%);
+  -o-border-image: linear-gradient(45deg, #8C8C8C calc(100% - 18px), rgba(255, 255, 255, 0) calc(100% - 18px), rgba(255, 255, 255, 0) 100%);
+     border-image: linear-gradient(45deg, #8C8C8C calc(100% - 18px), rgba(255, 255, 255, 0) calc(100% - 18px), rgba(255, 255, 255, 0) 100%);
+  -webkit-clip-path: polygon(calc(100% - 26px) 0, 100% 26px, 100% 100%, -20px 100%, -20px 0);
+          clip-path: polygon(calc(100% - 26px) 0, 100% 26px, 100% 100%, -20px 100%, -20px 0);
+  border-style: solid;
+  border-image-slice: 1;
+}
+.file-icon--medium::before {
+  top: -2px;
+  right: -2px;
+  height: 25px;
+  width: 25px;
+  box-shadow: -1.5px 1.5px 0px 1.5px #8C8C8C;
+  border-bottom-left-radius: 5px;
+  background: linear-gradient(45deg, #FFFFFF calc(50% - 2px), #8C8C8C calc(50% - 2px), #8C8C8C calc(50% + 2px), transparent calc(50% + 2px), transparent 100%);
+}
+.file-icon--medium::after {
+  height: 25px;
+  width: 57.5px;
+  font-size: 20px;
+  bottom: 8px;
+  left: -20px;
+}
+.file-icon--large {
+  width: 100px;
+  height: 140px;
+  border-width: 4px;
+  margin-left: 36px;
+  background: linear-gradient(45deg, #FFFFFF calc(100% - 35px), rgba(255, 255, 255, 0) calc(100% - 35px), rgba(255, 255, 255, 0) 100%);
+  -o-border-image: linear-gradient(45deg, #8C8C8C calc(100% - 38px), rgba(255, 255, 255, 0) calc(100% - 38px), rgba(255, 255, 255, 0) 100%);
+     border-image: linear-gradient(45deg, #8C8C8C calc(100% - 38px), rgba(255, 255, 255, 0) calc(100% - 38px), rgba(255, 255, 255, 0) 100%);
+  -webkit-clip-path: polygon(calc(100% - 48px) 0, 100% 48px, 100% 100%, -40px 100%, -40px 0);
+          clip-path: polygon(calc(100% - 48px) 0, 100% 48px, 100% 100%, -40px 100%, -40px 0);
+  border-style: solid;
+  border-image-slice: 1;
+}
+.file-icon--large::before {
+  top: -4px;
+  right: -4px;
+  height: 50px;
+  width: 50px;
+  box-shadow: -2px 2px 0px 2px #8C8C8C;
+  border-bottom-left-radius: 5px;
+  background: linear-gradient(45deg, #FFFFFF calc(50% - 2px), #8C8C8C calc(50% - 2px), #8C8C8C calc(50% + 2px), transparent calc(50% + 2px), transparent 100%);
+}
+.file-icon--large::after {
+  height: 50px;
+  width: 115px;
+  font-size: 40px;
+  bottom: 20px;
+  left: -40px;
+}
